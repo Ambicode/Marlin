@@ -75,7 +75,7 @@ Here are some standard links for getting your machine calibrated:
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "SAV MkI"
+#define CUSTOM_MACHINE_NAME "KitPrinter3D"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -332,8 +332,8 @@ Here are some standard links for getting your machine calibrated:
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-const bool X_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
-const bool Y_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
+const bool X_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
+const bool Y_MIN_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool Z_MIN_ENDSTOP_INVERTING = true; // set to true to invert the logic of the endstop.
 const bool X_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
 const bool Y_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic of the endstop.
@@ -370,7 +370,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 
 // @section extruder
@@ -399,9 +399,9 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 200
-#define Y_MAX_POS 200
-#define Z_MAX_POS 200
+#define X_MAX_POS 185
+#define Y_MAX_POS 180
+#define Z_MAX_POS 180
 
 //===========================================================================
 //========================= Filament Runout Sensor ==========================
@@ -443,7 +443,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
 // @section bedlevel
 
-//#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
+#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
 //#define DEBUG_LEVELING_FEATURE
 //#define Z_MIN_PROBE_REPEATABILITY_TEST  // If not commented out, Z-Probe Repeatability test will be included if Auto Bed Leveling is Enabled.
 
@@ -467,10 +467,10 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
   #if ENABLED(AUTO_BED_LEVELING_GRID)
 
     // The edges of the rectangle in which to probe
-    #define LEFT_PROBE_BED_POSITION 55
-    #define RIGHT_PROBE_BED_POSITION 160
-    #define BACK_PROBE_BED_POSITION 170
-    #define FRONT_PROBE_BED_POSITION 20
+    #define LEFT_PROBE_BED_POSITION 40
+    #define RIGHT_PROBE_BED_POSITION 140
+    #define BACK_PROBE_BED_POSITION 140
+    #define FRONT_PROBE_BED_POSITION 40
 
     #define MIN_PROBE_EDGE 10 // The Z probe minimum square sides can be no smaller than this.
 
@@ -493,14 +493,14 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
   // Offsets to the Z probe relative to the nozzle tip.
   // X and Y offsets must be integers.
-  #define X_PROBE_OFFSET_FROM_EXTRUDER -35     // Z probe to nozzle X offset: -left  +right
+  #define X_PROBE_OFFSET_FROM_EXTRUDER 60     // Z probe to nozzle X offset: -left  +right
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 0     // Z probe to nozzle Y offset: -front +behind
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -0.45  // Z probe to nozzle Z offset: -below (always!)
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 0  // Z probe to nozzle Z offset: -below (always!)
 
   #define Z_RAISE_BEFORE_HOMING 2       // (in mm) Raise Z axis before homing (G28) for Z probe clearance.
   // Be sure you have this distance over your Z_MAX_POS in case.
 
-  #define XY_TRAVEL_SPEED 3000         // X and Y axis travel speed between probes, in mm/min.
+  #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min.
 
   #define Z_RAISE_BEFORE_PROBING 2   // How much the Z axis will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 3  // How much the Z axis will be raised when traveling from between next probing points.
@@ -590,17 +590,18 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 // default settings
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.145, 79.58, 4000.00, 797.07494}  // default steps per unit for ultimaker
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {159.06, 158.89, 8000.00, 100}  // default steps per unit for ultimaker (vinciBot)
-  //#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 1550}  // default steps per unit for ultimaker (T800)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {159.06, 158.89, 8000.00, 100}  // default steps per unit for ultimaker (vinciBot)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 775}  // default steps per unit for A4988 (P3Steel)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 1550}  // default steps per unit for DRV8825 (P3Steel)
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 1, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {500, 500,10,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          250    // X, Y, Z and E acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration in mm/s^2 for retracts
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration in mm/s^2 for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   250    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                8.0    // (mm/sec)
+#define DEFAULT_XYJERK                20.0    // (mm/sec)
 #define DEFAULT_ZJERK                 0.4     // (mm/sec)
 #define DEFAULT_EJERK                 5.0     // (mm/sec)
 
@@ -646,11 +647,11 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 // Preheat Constants
 #define PLA_PREHEAT_HOTEND_TEMP   190
 #define PLA_PREHEAT_HPB_TEMP      50
-#define PLA_PREHEAT_FAN_SPEED     160   // Insert Value between 0 and 255
+#define PLA_PREHEAT_FAN_SPEED     0   // Insert Value between 0 and 255
 
-#define ABS_PREHEAT_HOTEND_TEMP   220
-#define ABS_PREHEAT_HPB_TEMP      110
-#define ABS_PREHEAT_FAN_SPEED     150   // Insert Value between 0 and 255
+#define ABS_PREHEAT_HOTEND_TEMP   230
+#define ABS_PREHEAT_HPB_TEMP      90
+#define ABS_PREHEAT_FAN_SPEED     0   // Insert Value between 0 and 255
 
 //==============================LCD and SD support=============================
 // @section lcd

@@ -770,7 +770,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
 // https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/schematics#!shiftregister-connection
 // LCD configuration: http://reprap.org/wiki/SAV_3D_LCD
-//#define SAV_3DLCD
+#define SAV_3DLCD
 
 // @section extras
 

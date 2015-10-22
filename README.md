@@ -17,7 +17,7 @@ kitprinter3d customization
 - This branch contain the following configuration:
   - Prusa i3/P3Steel 200x200mm printing surface.
   - Arduino + RAMPS electronics. (With Full Graphics LCD or without LCD)
-  - A4988 stepper controller.
+  - DRV8825 stepper controller.
   - Gregs Wade's extruder.
 
 For different Prusa i3/P3Steel configurations, try here:

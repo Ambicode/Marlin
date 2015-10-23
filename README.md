@@ -9,7 +9,7 @@ kitprinter3d customization
 - This branch contain the following configuration:
   - Prusa i3/P3Steel 200x200mm printing surface.
   - SAV MkI electronics.
-  - A4988 stepper controller.
+  - DRV8825 stepper controller.
   - Gregs Wade's extruder.
 
 For different Prusa i3/P3Steel configurations, try here:

@@ -47,7 +47,7 @@ Here are some standard links for getting your machine calibrated:
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(fm, SAV MkI)" //Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(fm, SAV MkI with DRV8825)" //Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 //#define STRING_SPLASH_LINE2 STRING_DISTRIBUTION_DATE // will be shown during bootup in line 2
@@ -591,8 +591,8 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.145, 79.58, 4000.00, 797.07494}  // default steps per unit for ultimaker
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {159.06, 158.89, 8000.00, 100}  // default steps per unit for ultimaker (vinciBot)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 775}  // default steps per unit for A4988 (P3Steel)
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 1550}  // default steps per unit for DRV8825 (P3Steel)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 775}  // default steps per unit for A4988 (P3Steel)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 1550}  // default steps per unit for DRV8825 (P3Steel)
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 1, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {500, 500,10,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 

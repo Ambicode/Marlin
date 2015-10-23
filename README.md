@@ -10,7 +10,7 @@ kitprinter3d customization
   - Prusa i3/P3Steel 200x200mm printing surface.
   - SAV MkI electronics.
   - SAV 3D LCD.
-  - DRV8825 stepper controller.
+  - A4988 stepper controller.
   - Gregs Wade's extruder.
 
 Please, be sure you install the required libraries for your LCD:

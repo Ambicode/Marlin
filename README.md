@@ -9,8 +9,14 @@ kitprinter3d customization
 - This branch contain the following configuration:
   - Prusa i3/P3Steel 200x200mm printing surface.
   - SAV MkI electronics.
+  - SAV 3D LCD.
   - DRV8825 stepper controller.
   - Gregs Wade's extruder.
+
+Please, be sure you install the required libraries for your LCD:
+--------------------
+Library: https://bitbucket.org/fmalpartida/new-liquidcrystal/wiki/schematics#!shiftregister-connection
+LCD configuration: http://reprap.org/wiki/SAV_3D_LCD
 
 For different Prusa i3/P3Steel configurations, try here:
 

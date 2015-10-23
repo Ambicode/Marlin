@@ -15,10 +15,10 @@ kitprinter3d customization
 
 - This fork is used to give our customers a precallibrated version of Marlin for their printers.
 - This branch contain the following configuration:
-  - Prusa i3/P3Steel 200x200mm printing surface.
-  - Arduino + RAMPS electronics. (With Full Graphics LCD or without LCD)
+  - Prusa **P3Steel PRO Easy build**.
+  - Arduino + RAMPS electronics with Full Graphics LCD.
   - A4988 stepper controller.
-  - Gregs Wade's extruder.
+  - Mk8 direct drive extruder.
 
 For different Prusa i3/P3Steel configurations, try here:
 

@@ -20,7 +20,12 @@ kitprinter3d customization
   - DRV8825 stepper controller.
   - Gregs Wade's extruder.
 
+Please, be sure you install the required libraries for your LCD (even if you are not connecting it now):
+--------------------
+Library: https://github.com/olikraus/U8glib_Arduino/releases/tag/1.18.1
+
 For different Prusa i3/P3Steel configurations, try here:
+--------------------
 
 - P3Steel PRO Easy Build:
      - [Arduino + RAMPS, A4988, Mk8 direct drive extruder.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-PRO-A4988)

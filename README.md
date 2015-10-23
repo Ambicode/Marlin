@@ -2,6 +2,35 @@
 <img align="top" width=175 src="Documentation/Logo/Marlin%20Logo%20GitHub.png" />
  Documentation has moved to [marlinfirmware.org](http://www.marlinfirmware.org).
 
+kitprinter3d customization
+===================
+
+- This fork is used to give our customers a precallibrated version of Marlin for their printers.
+- This branch contain the following configuration:
+  - Prusa i3/P3Steel 200x200mm printing surface.
+  - SAV MkI electronics.
+  - A4988 stepper controller.
+  - Gregs Wade's extruder.
+
+For different Prusa i3/P3Steel configurations, try here:
+
+- P3Steel PRO Easy Build:
+     - [Arduino + RAMPS, A4988, Mk8 direct drive extruder.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-PRO-A4988)
+     - [Arduino + RAMPS, DRV8825, Mk8 direct drive extruder.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-PRO-DRV8825)
+- Arduino + RAMPS:
+    - [A4988 stepper controller. (With Full Graphics LCD or without LCD)](https://github.com/kitprinter3d/Marlin/tree/RAMPS-A4988)
+    - [DRV8825 stepper controller. (With Full Graphics LCD or without LCD)](https://github.com/kitprinter3d/Marlin/tree/RAMPS-DRV8825)
+- SAV MkI:
+    - A4988 stepper controller:
+      - [Without SAV3D LCD](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-A4988)
+      - [With SAV3D LCD](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-A4988-LCD)
+      - [With SAV3D LCD **and** Autolevel](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-A4988-LCD-Autolevel)
+    - DRV8825 stepper controller:
+      - [Without SAV3D LCD](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-DRV8825)
+      - [With SAV3D LCD](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-DRV8825-LCD)
+      - [With SAV3D LCD **and** Autolevel](https://github.com/kitprinter3d/Marlin/tree/SAV-MkI-DRV8825-LCD-Autolevel)
+
+
 ## Release Candidate -- Marlin 1.1.0-RC2 - 29 September 2015
 
 __Not for production use – use with caution!__

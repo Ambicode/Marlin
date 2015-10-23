@@ -17,7 +17,7 @@ kitprinter3d customization
 - This branch contain the following configuration:
   - Prusa **P3Steel PRO Easy build**.
   - Arduino + RAMPS electronics with Full Graphics LCD.
-  - A4988 stepper controller.
+  - DRV8825 stepper controller.
   - Mk8 direct drive extruder.
 
 For different Prusa i3/P3Steel configurations, try here:

@@ -15,14 +15,11 @@ kitprinter3d customization
 
 - This fork is used to give our customers a precallibrated version of Marlin for their printers.
 - This branch contain the following configuration:
-  - Prusa **P3Steel PRO Easy build**.
-  - Arduino + RAMPS electronics with Full Graphics LCD.
+  - Prusa **P3Steel XL**.
+  - Arduino + RAMPS electronics with 2004 alphanumeric LCD.
   - A4988 stepper controller.
   - Mk8 direct drive extruder.
 
-Please, be sure you install the required libraries for your LCD (even if you are not connecting it now):
---------------------
-Library: https://github.com/olikraus/U8glib_Arduino/releases/tag/1.18.1
 
 For different Prusa i3/P3Steel configurations, try here:
 --------------------
@@ -30,6 +27,9 @@ For different Prusa i3/P3Steel configurations, try here:
 - P3Steel PRO Easy Build:
      - [Arduino + RAMPS, A4988, Mk8 direct drive extruder, Full Graphics Controller.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-PRO-A4988)
      - [Arduino + RAMPS, DRV8825, Mk8 direct drive extruder, Full Graphics Controller.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-PRO-DRV8825)
+- P3Steel XL:
+     - [Arduino + RAMPS, A4988, Mk8 direct drive extruder, 2004 Alphanumeric Controller.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-XL-A4988)
+     - [Arduino + RAMPS, DRV8825, Mk8 direct drive extruder, 2004 Alphanumeric Controller.](https://github.com/kitprinter3d/Marlin/tree/P3Steel-XL-DRV8825)
 - Arduino + RAMPS:
     - [A4988 stepper controller. (Without LCD)](https://github.com/kitprinter3d/Marlin/tree/RAMPS-A4988)
     - [A4988 stepper controller. (With Full Graphics LCD)](https://github.com/kitprinter3d/Marlin/tree/RAMPS-A4988-LCD)

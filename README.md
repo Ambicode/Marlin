@@ -17,7 +17,7 @@ kitprinter3d customization
 - This branch contain the following configuration:
   - Prusa **P3Steel XL**.
   - Arduino + RAMPS electronics with 2004 alphanumeric LCD.
-  - A4988 stepper controller.
+  - DRV8825 stepper controller.
   - Mk8 direct drive extruder.
 
 

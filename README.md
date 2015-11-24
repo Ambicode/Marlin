@@ -7,7 +7,7 @@ kitprinter3d customization
 
 - This fork is used to give our customers a precallibrated version of Marlin for their printers.
 - This branch contain the following configuration:
-  - Prusa i3/P3Steel 200x200mm printing surface.
+  - Prusa P3Steel XL 200x300mm printing surface.
   - SAV MkI electronics.
   - SAV 3D LCD.
   - DRV8825 stepper controller.

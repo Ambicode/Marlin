@@ -47,7 +47,7 @@ Here are some standard links for getting your machine calibrated:
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(fm, SAV MkI with DRV8825)" //Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(SAV MkI with DRV8825 for XL)" //Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 //#define STRING_SPLASH_LINE2 STRING_DISTRIBUTION_DATE // will be shown during bootup in line 2
@@ -400,7 +400,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS 185
-#define Y_MAX_POS 180
+#define Y_MAX_POS 280
 #define Z_MAX_POS 180
 
 //===========================================================================
@@ -469,7 +469,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
     // The edges of the rectangle in which to probe
     #define LEFT_PROBE_BED_POSITION 40
     #define RIGHT_PROBE_BED_POSITION 140
-    #define BACK_PROBE_BED_POSITION 140
+    #define BACK_PROBE_BED_POSITION 240
     #define FRONT_PROBE_BED_POSITION 40
 
     #define MIN_PROBE_EDGE 10 // The Z probe minimum square sides can be no smaller than this.
@@ -483,7 +483,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
     // Arbitrary points to probe.
     // A simple cross-product is used to estimate the plane of the bed.
     #define ABL_PROBE_PT_1_X 15
-    #define ABL_PROBE_PT_1_Y 180
+    #define ABL_PROBE_PT_1_Y 270
     #define ABL_PROBE_PT_2_X 15
     #define ABL_PROBE_PT_2_Y 20
     #define ABL_PROBE_PT_3_X 170

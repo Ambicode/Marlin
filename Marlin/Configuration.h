@@ -25,7 +25,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "(kp3d, dual extruder)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(kp3d, dual extruder A4988)" // Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -474,8 +474,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 93}  // default steps per unit for A4988 (P3Steel PRO)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 186}  // default steps per unit for DRV8825 (P3Steel PRO)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 93}  // default steps per unit for A4988 (P3Steel PRO)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 186}  // default steps per unit for DRV8825 (P3Steel PRO)
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 1, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {5000,5000,10,5000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 

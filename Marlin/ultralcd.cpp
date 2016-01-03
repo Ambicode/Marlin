@@ -674,6 +674,22 @@ static void lcd_move_e()
     if (LCD_CLICKED) lcd_goto_menu(lcd_move_menu_axis);
 }
 
+static void lcd_change_e()
+{
+
+    if (active_extruder == 0)
+    {
+        enquecommand_P((PSTR("T1"))); // change extruder
+            lcd_move_menu_axis();
+    }
+    else
+    {
+        enquecommand_P((PSTR("T0"))); // change extruder
+            lcd_move_menu_axis();
+    } 
+    if (LCD_CLICKED) lcd_goto_menu(lcd_move_menu_axis);
+}
+
 static void lcd_move_menu_axis()
 {
     START_MENU();
@@ -684,6 +700,18 @@ static void lcd_move_menu_axis()
     {
         MENU_ITEM(submenu, MSG_MOVE_Z, lcd_move_z);
         MENU_ITEM(submenu, MSG_MOVE_E, lcd_move_e);
+    #if EXTRUDERS > 1
+    if (active_extruder == 0)
+    {
+        MENU_ITEM(function, "Switch to E1", lcd_change_e);
+    }
+    else
+    {
+        MENU_ITEM(function, "Switch to E0", lcd_change_e);
+    } 
+
+    #endif
+    // endif EXTRUDERS > 1
     }
     END_MENU();
 }

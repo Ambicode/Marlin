@@ -244,14 +244,14 @@ your extruder heater takes 2 minutes to hit the target on heating.
 // uncomment the 2 defines below:
 
 // Parameters for all extruder heaters
-#define THERMAL_RUNAWAY_PROTECTION_PERIOD 40 //in seconds
+#define THERMAL_RUNAWAY_PROTECTION_PERIOD 180 //in seconds
 #define THERMAL_RUNAWAY_PROTECTION_HYSTERESIS 4 // in degree Celsius
 
 // If you want to enable this feature for your bed heater,
 // uncomment the 2 defines below:
 
 // Parameters for the bed heater
-#define THERMAL_RUNAWAY_PROTECTION_BED_PERIOD 20 //in seconds
+#define THERMAL_RUNAWAY_PROTECTION_BED_PERIOD 120 //in seconds
 #define THERMAL_RUNAWAY_PROTECTION_BED_HYSTERESIS 2 // in degree Celsius
 //===========================================================================
 
@@ -477,10 +477,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 4000, 93}  // default steps per unit for A4988 (P3Steel PRO)
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 8000, 186}  // default steps per unit for DRV8825 (P3Steel PRO)
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 1, 45}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {5000,5000,10,5000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {500,500,10,5000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  2000   // X, Y, Z and E max acceleration in mm/s^2 for retracts
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  500   // X, Y, Z and E max acceleration in mm/s^2 for retracts
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
@@ -489,7 +489,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // #define EXTRUDER_OFFSET_Y {0.0, 5.00}  // (in mm) for each extruder, offset of the hotend on the Y axis
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                20.0    // (mm/sec)
+#define DEFAULT_XYJERK                10.0    // (mm/sec)
 #define DEFAULT_ZJERK                 0.4     // (mm/sec)
 #define DEFAULT_EJERK                 5.0    // (mm/sec)
 
